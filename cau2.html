@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang so nguyen</title>
+</head>
+<body>
+<script>
+    
+    let a = [10, 5, 2, 8,9, 7, 13];
+    let c = [2, 4, 5, 6, 8];
+
+    let b = new Array();
+    let count =0;
+    let flag = 0;
+    
+    
+    function listPrimes(x) {
+        console.log('function');
+
+        for (let i = 0; i <x.length ; i++) {
+            if(x[i] < 2){
+                continue;
+            }else {
+                flag =0;
+                for (let j = 2; j <= Math.sqrt(x[i]) ; j++) {
+                    if(x[i] % j == 0){
+                        flag++;
+                    }
+                }
+                if(flag < 1){
+                    b[count] = x[i];
+                    count ++;
+                }
+            }
+        }
+    }
+
+    listPrimes(a);
+    alert(b);
+
+    // listPrimes(c);
+    // alert(b);
+    
+    
+</script>
+</body>
+</html>

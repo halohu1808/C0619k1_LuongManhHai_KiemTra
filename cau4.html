@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đầu vào là một mảng 2 chiều, đầu ra là mảng 1</title>
+</head>
+<body>
+
+<script>
+    let twoWayArr = [[1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]];
+
+    let oneWayArr = new Array();
+
+    function createArray(x) {
+        for (let i = 0; i < twoWayArr.length; i++) {
+            if (i % 2 != 0) {
+                let c = twoWayArr[i].reverse();
+                oneWayArr = oneWayArr.concat(c);
+            } else {
+                oneWayArr = oneWayArr.concat(twoWayArr[i]);
+            }
+
+
+        }
+    }
+
+    createArray(twoWayArr);
+    alert(oneWayArr);
+
+
+</script>
+
+</body>
+</html>

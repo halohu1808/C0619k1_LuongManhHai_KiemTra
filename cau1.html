@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+
+<script>
+
+    let a = parseInt(prompt('input number: '));
+    let check = '';
+    function isprime(x) {
+        console.log('1');
+
+        if (x < 2) {
+            check = false;
+        } else {
+            for (let j = 2; j <= Math.sqrt(x); j++) {
+                if (x % j == 0) {
+                    check = false;
+                    break;
+                } else {
+                    check = true;
+                }
+            }
+            return check;
+        }
+    }
+
+    alert(isprime(a));
+
+
+</script>
+
+</body>
+</html>
